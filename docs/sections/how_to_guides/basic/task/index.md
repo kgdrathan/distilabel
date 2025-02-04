@@ -108,9 +108,9 @@ uf.print(
 
     ```python
     from distilabel.models import LLM
-    from distilabel.models.mixins import MagpieChatTemplateMixin
+    from distilabel.models.mixins.magpie import MagpieChatTemplateMixin
 
-    class DummyLLM(AsyncLLM, MagpieChatTemplateMixin):
+    class DummyLLM(LLM, MagpieChatTemplateMixin):
         structured_output: Any = None
         magpie_pre_query_template: str = "llama3"
 
